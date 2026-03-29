@@ -1,4 +1,5 @@
 # Finale
+
 # 终章
 
 > The team celebrates the successful completion of Phase 1 of Project Mercury and looks ahead to Phase 2 — a journey into the world of DevOps and cloud computing.
@@ -8,6 +9,7 @@
 ---
 
 ## The Celebration
+
 ## 庆功时刻
 
 The team — Andrew, Bob, Donald, Amira, and Aditi — gathered to celebrate the successful completion of Phase 1 of Project Mercury. Dave had also been invited to join the festivities. The air was electric with relief and pride after the nail-biting morning they had all just endured.
@@ -25,6 +27,7 @@ Special congratulations were directed at Bob. Donald, ever composed, added, "Fin
 ---
 
 ## Recognition and Reflection
+
 ## 认可与反思
 
 Bob was praised for quickly mastering the fundamentals of Linux under real-world pressure. Dave couldn't resist a friendly jab: "Perhaps it's time to further validate your Linux fundamentals? You already know more than 60% of the concepts."
@@ -38,6 +41,7 @@ Bob 在脑海中反复琢磨这个想法。*我应该在下一阶段开始之前
 ---
 
 ## A Private Conversation
+
 ## 私下的一番话
 
 Before leaving, Donald pulled Bob aside for a quiet, candid conversation.
@@ -71,6 +75,7 @@ Mumshad Mannambeth 咧嘴笑着补充道："我差点没认出你来，Bob。"
 ---
 
 ## The Train Ride Home
+
 ## 归途列车
 
 Startled from his quiet reflection, Bob looked up to see Dave waving at him while walking into the train compartment. It had been a long, unforgettable day — and yet, somehow, he felt energized rather than exhausted. On his way home, Bob's mobile screen glowed continuously with client appreciation emails, making him feel even more proud of his achievements.
@@ -116,13 +121,14 @@ Dave 笑了。"只要你感兴趣——没有压力的。"
 ---
 
 ## Looking Ahead: The DevOps Journey
+
 ## 展望未来：DevOps 之旅
 
 <Callout icon="lightbulb" color="#1CB2FE">
   Take it from Dave: In this line of work, learning never stops. There are no limits to what you can achieve when you embrace the latest trends in technology, such as cloud computing and DevOps. Staying ahead of the curve is key to success.
 
   听 Dave 的话：在这个行业里，学习永无止境。当你拥抱云计算和 DevOps 等最新技术趋势时，你所能取得的成就是没有上限的。保持领先是成功的关键。
-</Callout>
+`</Callout>`
 
 Dave leaned back thoughtfully and said, "Take it from me, Bob: in this line of work, the learning never stops. I always see it as a good thing — not a burden. There are no limits to what you can achieve, my young friend."
 
@@ -147,19 +153,20 @@ As the train pulled into his station, Bob looked out at the city lights twinklin
 ---
 
 ## What's Next?
+
 ## 下一步是什么？
 
 Phase 2 of Project Mercury will introduce Bob — and you — to the world of **DevOps**:
 
 Mercury 项目第二阶段将带领 Bob——以及你——进入 **DevOps** 的世界：
 
-| Topic | Description |
-|-------|-------------|
-| **容器化 (Docker)** | Package applications and their dependencies into portable, consistent units |
-| **容器编排 (Kubernetes)** | Manage and scale containerized applications across clusters |
-| **基础设施即代码** | Define and provision infrastructure using code (Terraform, Ansible) |
-| **CI/CD 流水线** | Automate build, test, and deployment workflows |
-| **云平台** | Deploy and operate on AWS, GCP, or Azure |
+| Topic                           | Description                                                                 |
+| ------------------------------- | --------------------------------------------------------------------------- |
+| **容器化 (Docker)**       | Package applications and their dependencies into portable, consistent units |
+| **容器编排 (Kubernetes)** | Manage and scale containerized applications across clusters                 |
+| **基础设施即代码**        | Define and provision infrastructure using code (Terraform, Ansible)         |
+| **CI/CD 流水线**          | Automate build, test, and deployment workflows                              |
+| **云平台**                | Deploy and operate on AWS, GCP, or Azure                                    |
 
 The fundamentals you have learned in this Linux course — file permissions, process management, networking, service management — are the bedrock upon which all of these technologies are built.
 
@@ -170,7 +177,3 @@ The fundamentals you have learned in this Linux course — file permissions, pro
 </CardGroup>
 
 ---
-
-Built with [Mintlify](https://mintlify.com)
-
-- Let's Hear the Finale [Story](https://kodekloud.com/topic/finale/)

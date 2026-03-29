@@ -1,4 +1,5 @@
 # File Types in Linux
+
 # Linux 中的文件类型
 
 - Take me to the [Video Tutorial](https://kodekloud.com/topic/file-types/)
@@ -10,6 +11,7 @@ In this section, we will take a look at the different types of files in Linux, a
 ---
 
 ## Everything is a File in Linux
+
 ## Linux 中一切皆文件
 
 One of the most fundamental principles of Linux (inherited from Unix) is: **"Everything is a file."**
@@ -23,6 +25,7 @@ This means that in Linux, every object — regular documents, directories, hardw
 ---
 
 ## The 7 File Types in Linux
+
 ## Linux 中的 7 种文件类型
 
 ![file-types](../../images/file-types.PNG)
@@ -92,6 +95,7 @@ Character device files represent hardware devices that **transfer data character
 字符设备文件代表**逐字符传输数据**（一次一个字节）、不使用缓冲的硬件设备。它们位于 `/dev/` 文件系统下。
 
 **Examples / 示例:**
+
 - `/dev/tty` — terminal device / 终端设备
 - `/dev/ttyS0` — serial port (COM1) / 串口（COM1）
 - `/dev/null` — null device (discards all input) / 空设备（丢弃所有输入）
@@ -117,6 +121,7 @@ Block device files represent hardware devices that **transfer data in fixed-size
 块设备文件代表以**固定大小块传输数据**、具有内核级缓冲的硬件设备。存储设备是主要例子。
 
 **Examples / 示例:**
+
 - `/dev/sda` — first SCSI/SATA hard disk / 第一块 SCSI/SATA 硬盘
 - `/dev/sda1` — first partition of `/dev/sda` / `/dev/sda` 的第一个分区
 - `/dev/nvme0n1` — first NVMe SSD / 第一块 NVMe SSD
@@ -130,6 +135,7 @@ brw-rw---- 1 root disk 8, 0 Mar 28 09:00 /dev/sda
 ```
 
 > **Character vs Block / 字符设备 vs 块设备**:
+>
 > - **Character**: Stream-based, no buffering, read/write one byte at a time / 流式，无缓冲，一次读写一个字节
 > - **Block**: Block-based (e.g., 512 bytes or 4096 bytes), with kernel cache buffer / 块式（如 512 或 4096 字节），有内核缓存缓冲
 
@@ -160,13 +166,13 @@ lrwxrwxrwx 1 root root 20 Jan 14 /sbin/init -> /lib/systemd/systemd
 
 > **Hard Link vs Soft Link / 硬链接 vs 软链接**:
 >
-> | Feature / 特性 | Hard Link / 硬链接 | Soft Link / 软链接 |
-> |---|---|---|
-> | Points to / 指向 | Inode (data) directly / 直接指向 inode（数据）| Filename (path) / 文件名（路径）|
-> | Works across filesystems / 跨文件系统 | No / 不支持 | Yes / 支持 |
-> | Works for directories / 用于目录 | No / 不支持 | Yes / 支持 |
-> | Still works if target moved/deleted / 目标移动/删除后是否有效 | Yes (data persists) / 是（数据保留）| No (broken link) / 否（链接失效）|
-> | `ls -l` indicator / `ls -l` 标识 | Same as regular file (`-`) / 与普通文件相同（`-`）| `l` |
+> | Feature / 特性                                                | Hard Link / 硬链接                                     | Soft Link / 软链接                |
+> | ------------------------------------------------------------- | ------------------------------------------------------ | --------------------------------- |
+> | Points to / 指向                                              | Inode (data) directly / 直接指向 inode（数据）         | Filename (path) / 文件名（路径）  |
+> | Works across filesystems / 跨文件系统                         | No / 不支持                                            | Yes / 支持                        |
+> | Works for directories / 用于目录                              | No / 不支持                                            | Yes / 支持                        |
+> | Still works if target moved/deleted / 目标移动/删除后是否有效 | Yes (data persists) / 是（数据保留）                   | No (broken link) / 否（链接失效） |
+> | `ls -l` indicator / `ls -l` 标识                          | Same as regular file (`-`) / 与普通文件相同（`-`） | `l`                             |
 
 ```bash
 # Create hard link / 创建硬链接
@@ -185,6 +191,7 @@ A socket is a special file that enables **bidirectional communication between tw
 套接字是一种允许**同一系统上两个进程之间双向通信**的特殊文件。与使用 IP 地址的网络套接字不同，Unix 域套接字使用文件系统路径。
 
 **Examples / 示例:**
+
 - `/var/run/docker.sock` — Docker daemon socket / Docker 守护进程套接字
 - `/run/mysqld/mysqld.sock` — MySQL socket / MySQL 套接字
 - `/tmp/.X11-unix/X0` — X11 display server socket / X11 显示服务器套接字
@@ -227,6 +234,7 @@ hello
 ---
 
 ## Identifying File Types
+
 ## 识别文件类型
 
 ### Method 1: `file` Command / 方法一：`file` 命令
@@ -287,15 +295,15 @@ $ ls -l /etc/passwd
 
 **File type indicators / 文件类型标识符:**
 
-| First Character / 第一个字符 | File Type / 文件类型 | Example / 示例 |
-|---|---|---|
-| `-` | Regular file / 普通文件 | `/etc/passwd` |
-| `d` | Directory / 目录 | `/home/michael` |
-| `c` | Character device / 字符设备 | `/dev/tty` |
-| `b` | Block device / 块设备 | `/dev/sda` |
-| `l` | Symbolic link / 符号链接 | `/sbin/init` |
-| `s` | Socket / 套接字 | `/var/run/docker.sock` |
-| `p` | Named pipe / 命名管道 | `mypipe` |
+| First Character / 第一个字符 | File Type / 文件类型        | Example / 示例           |
+| ---------------------------- | --------------------------- | ------------------------ |
+| `-`                        | Regular file / 普通文件     | `/etc/passwd`          |
+| `d`                        | Directory / 目录            | `/home/michael`        |
+| `c`                        | Character device / 字符设备 | `/dev/tty`             |
+| `b`                        | Block device / 块设备       | `/dev/sda`             |
+| `l`                        | Symbolic link / 符号链接    | `/sbin/init`           |
+| `s`                        | Socket / 套接字             | `/var/run/docker.sock` |
+| `p`                        | Named pipe / 命名管道       | `mypipe`               |
 
 ### Method 3: `stat` Command / 方法三：`stat` 命令
 
@@ -321,19 +329,21 @@ $ stat /home/michael
 ---
 
 ## Summary
+
 ## 小结
 
-| Type / 类型 | Symbol / 符号 | Description / 描述 | Example / 示例 |
-|---|---|---|---|
-| Regular file / 普通文件 | `-` | Text, binary, images, archives / 文本、二进制、图像、归档 | `/etc/passwd` |
-| Directory / 目录 | `d` | Container for files / 文件容器 | `/home/michael` |
-| Character device / 字符设备 | `c` | Stream-based hardware / 流式硬件 | `/dev/tty` |
-| Block device / 块设备 | `b` | Block-based storage / 块式存储 | `/dev/sda` |
-| Symbolic link / 符号链接 | `l` | Pointer to another file/dir / 指向其他文件/目录的指针 | `/sbin/init` |
-| Socket / 套接字 | `s` | IPC between processes / 进程间通信 | `/var/run/docker.sock` |
-| Named pipe / 命名管道 | `p` | One-direction IPC / 单向进程间通信 | `mypipe` |
+| Type / 类型                 | Symbol / 符号 | Description / 描述                                        | Example / 示例           |
+| --------------------------- | ------------- | --------------------------------------------------------- | ------------------------ |
+| Regular file / 普通文件     | `-`         | Text, binary, images, archives / 文本、二进制、图像、归档 | `/etc/passwd`          |
+| Directory / 目录            | `d`         | Container for files / 文件容器                            | `/home/michael`        |
+| Character device / 字符设备 | `c`         | Stream-based hardware / 流式硬件                          | `/dev/tty`             |
+| Block device / 块设备       | `b`         | Block-based storage / 块式存储                            | `/dev/sda`             |
+| Symbolic link / 符号链接    | `l`         | Pointer to another file/dir / 指向其他文件/目录的指针     | `/sbin/init`           |
+| Socket / 套接字             | `s`         | IPC between processes / 进程间通信                        | `/var/run/docker.sock` |
+| Named pipe / 命名管道       | `p`         | One-direction IPC / 单向进程间通信                        | `mypipe`               |
 
 **Identification commands / 识别命令:**
+
 ```bash
 $ file <path>        # Best for content-based detection / 最适合基于内容的检测
 $ ls -l <path>       # Quick check via first character / 通过第一个字符快速检查
